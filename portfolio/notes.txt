@@ -1,0 +1,8 @@
+
+
+
+
+## Installed Packages: 
+1. Tailwind (styling): npm install tailwindcss @tailwindcss/vite
+2. React Router (to handle different pages): npm install react-router-dom
+3. Absolute Imports (using @/... ) npm install -D @types/node

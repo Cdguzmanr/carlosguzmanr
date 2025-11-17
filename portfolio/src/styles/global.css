@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* Adding a custom color named 'brand' */
+  --color-brand: #ff5733;
+  
+  /* Custom Color Palette */
+  --color-primary1: #003F1C;
+  --color-primary2: #A1764B;
+  --color-neutral1: #E5DED6;
+  --color-neutral2: #E7E6E2;
+  --color-accent1: #053D7F;
+  --color-text1: #32312D;
+
+  /* Adding a custom font family */
+  --font-display: "Oswald", sans-serif;
+}
