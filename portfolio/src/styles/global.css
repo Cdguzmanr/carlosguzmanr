@@ -1,9 +1,27 @@
 @import "tailwindcss";
 
-@theme {
-  /* Adding a custom color named 'brand' */
-  --color-brand: #ff5733;
-  
+/* Import Custom Fonts */
+@font-face {
+  font-family: BebasNeue;
+  src: url(../assets/fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: CaviarDreams;
+  src: url(../assets/fonts/CaviarDreams.ttf);
+}
+
+@font-face {
+  font-family: CaviarDreams_Bold;
+  src: url(../assets/fonts/CaviarDreams_Bold.ttf);
+}
+
+@font-face {
+  font-family: CaviarDreams_Italic;
+  src: url(../assets/fonts/CaviarDreams_Italic.ttf);
+}
+
+@theme {  
   /* Custom Color Palette */
   --color-primary1: #003F1C;
   --color-primary2: #A1764B;
@@ -11,7 +29,120 @@
   --color-neutral2: #E7E6E2;
   --color-accent1: #053D7F;
   --color-text1: #32312D;
+  --color-text2: #151316;
+
+  /* Aditional Colors */
+  --color-night: #151316;
 
   /* Adding a custom font family */
-  --font-display: "Oswald", sans-serif;
+  --font-bebas: 'BebasNeue', sans-serif;
+  --font-caviardreams: 'CaviarDreams', sans-serif;
+  --font-caviardreams-bold: 'CaviarDreams_Bold', sans-serif;
+  --font-caviardreams-italic: 'CaviarDreams_Italic', sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+/* ----------------------------------------- Standard Page Design ------------------------------------------------------------- */
+
+/* Utils */
+.title {
+  font-family: 'BebasNeue', sans-serif;
+  text-transform: capitalize;
+}
+
+#profilecard strong {
+  color: #2274A5;
+}
+
+.selected-item {
+  background-color: #2274A5 !important; 
+  color: white !important;
+}
+
+.outlined-text {
+  filter: drop-shadow(1px 1px black) drop-shadow(-1px -1px black) drop-shadow(1px -1px black) drop-shadow(-1px 1px black);
+  color: #F9F6EE;
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+/* Premium Card Shining Animation */
+.premium-card {
+  background-color: var(--color-primary1); 
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo elements for the shining effect */
+.premium-card:before,
+.premium-card:after {
+  content: "";
+  position: absolute;
+  height: 200%; /* Increase height to span the full card */
+  background-color: aliceblue;
+  opacity: 0.3;
+  animation: glider 4.5s infinite linear;  /* Slower animation duration */
+  pointer-events: none;
+  z-index: 2; /* Make sure the line is on top of the card content */
+}
+
+/* Slightly different width and opacity for variation */
+.premium-card:before {
+  width: 0.6em;
+  animation-delay: 0.05s;
+}
+
+.premium-card:after {
+  width: 0.4em;
+  opacity: 0.2;
+}
+
+/* Glider keyframes animation: line moves from top-left to bottom-right */
+@keyframes glider {
+  0% {
+    transform: translate(-100%, -100%) rotate(45deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(45deg);
+  }
+}
+
+/* Optional: Hide the glider animation on hover */
+/* .premium-card:hover:before,
+.premium-card:hover:after {
+  visibility: hidden;
+} */
+
+.slick-prev:before,
+    .slick-next:before {
+        color: black !important;
+    }
+
+
+/* Markdown formating */
+.markdown h2 {
+  font-size: x-large;
+  font-weight: bold;
+  color: #2274A5;
+}
+.markdown li {
+  margin-left: 1em;
+  list-style-type: disc;
+
 }

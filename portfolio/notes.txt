@@ -1,4 +1,6 @@
-
+** Project creation info - Vite Framework **
+run in terminal --> npm create vite@latest my-project
+→ name project  →   React   →   Typescript  →   Use Rollup (Experimental)   →   Use npm for installation and run
 
 
 
@@ -6,3 +8,27 @@
 1. Tailwind (styling): npm install tailwindcss @tailwindcss/vite
 2. React Router (to handle different pages): npm install react-router-dom
 3. Absolute Imports (using @/... ) npm install -D @types/node
+3. Page load animations: npm i framer-motion
+4. React icons: npm i react-icons
+5. Font Awesome (only in stable versions of NextJs):
+    → npm install --save @fortawesome/react-fontawesome
+    → npm i --save @fortawesome/free-solid-svg-icons
+    → npm i --save @fortawesome/free-regular-svg-icons
+    → npm i --save @fortawesome/free-brands-svg-icons
+6. Carousel component: npm install --save @types/react-slick react-slick slick-carousel
+7. Markdown reader (see projectsData.tsx): npm i react-markdown
+
+
+
+## General Notes:
+1. Terminal command to test proyect: npm run dev  
+2. Shortcut to create new react .tsx file: rafce + tab
+3. To create a different page: Add .tsx file (equivalence to index.html) inside src/pages/ directory. Then, set up page route in src/App.tsx component.
+4. Push to github: (1) git add . | (2) git commit -m "message" | (3) git push 
+5. Create a new code snippet (used for 'proj' template): ctrl+Shift+p → 'Snippets: Configure Snippets' → typescript.json → Add a new item to the Snippets array.
+
+
+
+## Learning Notes:
+1. .ts (TypeScript) is used for files with only TypeScript code — like utility functions, interfaces, constants, types, and config files. No JSX allowed here.
+2. .tsx (TypeScript + JSX) is used for files that contain JSX or React components, like return (<div>Hello</div>). Must  use .tsx if the file includes any JSX (JavaScript XML).

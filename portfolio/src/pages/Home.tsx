@@ -1,9 +1,14 @@
 // import React from 'react'
+// Components Import
+import Hero from "../components/sections/Hero"
+import Skills from "../components/sections/Skills"
 
 const Home = () => {
   return (
     <>
-        <div className="bg-blue-500">Home</div>
+      {/* Components */}
+      <Hero/>
+      <Skills />
     </>
   )
 }
