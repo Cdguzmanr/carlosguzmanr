@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, type LinkProps } from "react-router-dom";
 
-interface HoverLinkProps extends LinkProps {
+interface RoundLinkProps extends LinkProps {
   name: string;
   className?: string;
 }
 
-const HoverLink: React.FC<HoverLinkProps> = ({
+const RoundLink: React.FC<RoundLinkProps> = ({
   name,
   className = "",
   target = "_self",
@@ -15,14 +15,13 @@ const HoverLink: React.FC<HoverLinkProps> = ({
   return (
     <Link
       target={target}
-      className={`group font-caviardreams ${className}`}
       rel="noopener noreferrer"
+      className={`font-bebas text-xl text-primary1 hover:bg-primary1 hover:text-neutral2 transition-all duration-300 rounded-full border-solid border-3 p-2 border-primary1 text-center ${className}`}
       {...rest}
     >
       {name}
-      <span className="w-0 group-hover:w-full transition-all duration-300 border-b-2 bg-neutral1 block"></span>
     </Link>
   );
 };
 
-export default HoverLink;
+export default RoundLink;

@@ -1,5 +1,3 @@
-import React from 'react'
-import { scrollToElement } from '../../utils/scrollToElement'; // adjust path as needed
 import { motion } from "framer-motion";
 import { Resume } from '../../data/constants';
 import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
@@ -33,10 +31,10 @@ const Hero = () => {
         >
 
           <h2 className="font-bebas text-lg md:text-2xl leading-tight">ABOUT ME</h2>
-          <p className='text-base font-caviardreams'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque voluptatem enim repudiandae ipsam quo voluptates recusandae asperiores.</p>
+          <p className='text-base font-caviardreams'>I'm a software developer and computer science student originally from Costa Rica, now living in Green Bay, Wisconsin. I'm curious by nature, always learning something new. Lately I've been diving into machine learning and computer vision, as part of my CS degree with emphasis in Articial Intelligence.</p>
 
           <h2 className="mt-12 font-bebas text-lg md:text-2xl leading-tight">MY WORK</h2>
-          <p className='font-caviardreams'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore ab doloribus laudantium, officiis corrupti doloremque animi fugit.</p>
+          <p className='font-caviardreams'>My work centers on the Microsoft Development Stack including Azure, .NET, and SQL Server, across both front-end and back-end. I also have experience in UX design, public speaking, and consulting for small projects and non-profit organizations.</p>
 
           <div className="mt-12 flex flex-col md:flex-row gap-8 py-3 items-center">
             
