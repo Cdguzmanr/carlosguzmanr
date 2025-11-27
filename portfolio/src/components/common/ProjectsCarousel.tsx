@@ -41,7 +41,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="embla">
+    <div className="embla" ref={emblaRef}>
       <div className="embla__container">
 
         {sortedProjects.map((project) => (

@@ -1,7 +1,7 @@
 "use client"
 import { articlesData } from "../../data/articlesData";
 import { FaRegClipboard } from "react-icons/fa";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Email } from "../../data/constants";
 import HoverLink from "../common/HoverLink";
 

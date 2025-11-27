@@ -17,7 +17,8 @@ const CardPro: React.FC<ProjectCardProps> = ({ project }) => {
     navigate(`/projects/${slug}`);
   };
 
-  const handleFilterCategory = (category: string) => {
+  // const handleFilterCategory = (category: string) => {
+  const handleFilterCategory = () => {
     // Your Vite version seems to not use query filters yet,
     // so this just takes the user to the Projects page.
     navigate("/projects");
@@ -46,7 +47,8 @@ const CardPro: React.FC<ProjectCardProps> = ({ project }) => {
             <button
               key={category}
               className="bg-primary2 text-white font-caviardreams text-xs rounded-full px-3 py-1 m-1 hover:bg-accent1 transition-colors duration-300"
-              onClick={() => handleFilterCategory(category)} 
+              onClick={() => handleFilterCategory()} 
+              // onClick={() => handleFilterCategory(category)} 
             >
               {category}
             </button>
