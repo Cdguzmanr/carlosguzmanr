@@ -8,4 +8,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  // set up base for GitHub Pages deployment
+  base: '/portfolio/',
 })
