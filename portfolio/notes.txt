@@ -33,3 +33,7 @@ run in terminal --> npm create vite@latest my-project
 ## Learning Notes:
 1. .ts (TypeScript) is used for files with only TypeScript code — like utility functions, interfaces, constants, types, and config files. No JSX allowed here.
 2. .tsx (TypeScript + JSX) is used for files that contain JSX or React components, like return (<div>Hello</div>). Must  use .tsx if the file includes any JSX (JavaScript XML).
+
+
+
+## Deployment with Cloudflare (Wrangler)
