@@ -6,13 +6,8 @@
 "scripts": {
   "dev": "vite",
   "build": "tsc -b && vite build",
-  "preview": "vite preview",
-
-  "pages:preview": "npm run build && wrangler pages dev dist",
-  "pages:deploy": "npm run build && wrangler pages deploy dist",
-
-  "worker:preview": "npm run build && wrangler dev",
-  "worker:deploy": "npm run build && wrangler deploy"
+  "lint": "eslint .",
+  "preview": "vite preview"
 },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
