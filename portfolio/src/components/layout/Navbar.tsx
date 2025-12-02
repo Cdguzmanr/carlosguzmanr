@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
-import { Resume, navItems } from '../../data/constants';
+import { navItems } from '../../data/constants';
+import Resume from '../../assets/files/Carlos Guzman - Software Engineer.pdf';
 import HoverLink from '../common/HoverLink';
 
 const LogoUrl = "https://placehold.co/50x50/E5DED6/003F1C?text=CG";

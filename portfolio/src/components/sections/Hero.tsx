@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Resume } from '../../data/constants';
+import Resume from '../../assets/files/Carlos Guzman - Software Engineer.pdf';
 import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
 import { useCategoryFilterNav } from '../../hooks/useCategoryFilterNav';
 import portrait from '../../assets/images/portrait-transparent.svg';
