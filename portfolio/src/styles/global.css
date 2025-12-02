@@ -63,6 +63,53 @@
   text-transform: capitalize;
 }
 
+  /* On hover animation for buttons inside paragraphs (underline) with smooth transition */
+p button{
+  text-decoration: underline solid transparent;
+  text-underline-offset: 4px;  
+  transition: text-decoration-color 0.3s ease-in-out; 
+}
+p button:hover{
+  text-decoration-color: currentColor; 
+}
+
+/* ----------- Markdown formating ----------- */
+.markdown {
+  /* font-family: 'CaviarDreams', sans-serif; */
+  color: var(--color-text1);
+  line-height: 1.6;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  h2 {
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 1.35;
+  color: var(--color-accent1);
+  margin-bottom: 0.5em;
+  }
+
+  ol {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    margin-bottom: 1em;
+  }
+
+  li {
+  margin-left: 1em;
+  list-style-type: disc;
+  }
+
+}
+
+
+
+
+
 #profilecard strong {
   color: #2274A5;
 }
@@ -150,7 +197,7 @@
 
 
 
-/* ----------------------------------------- Embla Carousel Styles ------------------------------------------------------------- */
+/* -------------------------------------- Embla Carousel Styles ------------------------------------------------------------- */
 .embla {
   max-width: 48rem;
   margin: auto;

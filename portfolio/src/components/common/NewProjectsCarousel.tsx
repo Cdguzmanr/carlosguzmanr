@@ -3,7 +3,7 @@ import type { EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 
-import ProjectCard from "./CardPro";
+import ProjectCard from "./ProjectCard";
 import { type Project } from "../../types/IProject";
 import { sortProjects } from "../../utils/sortProjects";
 
@@ -62,7 +62,7 @@ const NewProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
       <div className="embla__viewport mx-auto h-auto w-full" ref={emblaRef}>
         <div className="embla__container h-full mb-6">
           {sortedProjects.map((project) => (
-            <div key={project.id} className="embla__slide py-6">
+            <div key={project.id} className="embla__slide pt-3 pb-11">
               <ProjectCard project={project} />
             </div>
           ))}
@@ -104,7 +104,7 @@ const NewProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
       </button>
 
       {/* Dot menu */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-3">
+      <div className="absolute left-1/2 -translate-x-1/2 flex gap-3">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}

@@ -36,4 +36,5 @@ run in terminal --> npm create vite@latest my-project
 
 
 
-## Deployment with Cloudflare (Wrangler)
+## Deployment with Cloudflare
+1. Set up the build directory in vite.config.ts:      plugins: [ ... ],  build: { outDir: 'dist', },

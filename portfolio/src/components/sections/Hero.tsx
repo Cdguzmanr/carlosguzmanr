@@ -1,11 +1,29 @@
 import { motion } from "framer-motion";
 import { Resume } from '../../data/constants';
 import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
+import { useCategoryFilterNav } from '../../hooks/useCategoryFilterNav';
+import portrait from '../../assets/images/portrait-transparent.svg';
 
 const Hero = () => {
+  const { handleFilterCategory } = useCategoryFilterNav();
   return (
     <>
         <section className='relative bg-linear-to-b from-primary1 to-night min-h-screen flex items-center justify-center overflow-hidden' >
+
+        {/* Center Back section - portrait */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                    w-[75vw]  opacity-40 pointer-events-none"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+        >
+          <img
+            src={portrait}
+            alt="Portrait of Carlos Guzman"
+            className="w-full h-auto object-cover"
+          />
+        </motion.div>
 
         {/* Main Text */}
         <motion.div 
@@ -34,7 +52,7 @@ const Hero = () => {
           <p className='text-base font-caviardreams'>I'm a software developer and computer science student originally from Costa Rica, now living in Green Bay, Wisconsin. I'm curious by nature, always learning something new. Lately I've been diving into machine learning and computer vision, as part of my CS degree with emphasis in Articial Intelligence.</p>
 
           <h2 className="mt-12 font-bebas text-lg md:text-2xl leading-tight">MY WORK</h2>
-          <p className='font-caviardreams'>My work centers on the Microsoft Development Stack including Azure, .NET, and SQL Server, across both front-end and back-end. I also have experience in UX design, public speaking, and consulting for small projects and non-profit organizations.</p>
+          <p className='font-caviardreams'>My work centers on the Microsoft Development Stack including <button onClick={() => handleFilterCategory('DevOps')}>Azure DevOps</button>, <button onClick={() => handleFilterCategory('.Net')}>.NET</button>, and <button onClick={() => handleFilterCategory('SQL')}>SQL Server</button>, across both front-end and back-end. I also have experience in UX design, public speaking, and consulting for small projects and non-profit organizations.</p>
 
           <div className="mt-12 flex flex-col md:flex-row gap-8 py-3 items-center">
             

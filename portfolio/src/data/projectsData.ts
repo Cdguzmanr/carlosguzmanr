@@ -36,7 +36,7 @@ export const projectsData: Project[] = [
     featured: true,
     title: "Uno Park",
     images: [UnoHome],
-    categories: ["Unity", "API", "C#", "Videogame", ],
+    categories: ["Unity", "API", "C#", "Videogame", "3D" ],
     summary: "Uno Park is a fully-featured 3D game developed using C# and Unity game engine. A re-design of the classic UNO experience.",
     description: `**"Uno Park"** is a 3D Unity game developed as my final project for the Software Development AAS program at Fox Valley Technical College. \n\nWhile most classmates created 2D games and programs, I chose to self-learn *Unity 3D* for a more challenging experience. \n\nMy partner, _[Austin Steffes](https://www.linkedin.com/in/austin-steffes/)_, handled the **server-side backend**, database, and part of the game API using **Microsoft Azure**, while I focused on **Unity development**. This included world modeling, menu design, camera movement, animations, and overall game functionality. \n\nThe game idea was designed around the camera movement and animation. I aimed to showcase a park-themed environment with in-game objects acting as interactive menus for a better immersive experience.`,
     video: "https://www.youtube.com/embed/H7cmYf08RQY?feature=oembed",
@@ -50,7 +50,7 @@ export const projectsData: Project[] = [
     featured: false,
     title: "The Hobby Hub",
     images: [TheHobbyHubHome],
-    categories: [".Net", "C#", "Agile Methodologies",],
+    categories: [".Net", "C#", "Agile Methodologies","Form"],
     summary: "A ASP.Net application built in collaboration with a multidiciplinary team of developers following Agile Methodologies.",
     description: `This is my final project for the Agile Methodologies class, where I worked with three other developers using SCRUM for project management. The Hobby Hub is an **ASP.NET MVC** project built with **.NET Core**, following a code-first database approach using **Microsoft Entity Framework**. To ensure data security, we implemented **GUIDs** for unique identifiers and hashed user passwords. \n\nThe project features **JavaScript animations** and design elements to enhance the user experience. We also used CodePen.io to draw inspiration from public scripts, modifying the code to fit the MVC structure and meet specific project requirements.`,
     video: "https://www.youtube.com/embed/eUvfKQzT1qs?feature=oembed",
@@ -64,7 +64,7 @@ export const projectsData: Project[] = [
     featured: false,
     title: "DVD Central",
     images: [DVDCentral3],
-    categories: [".Net", "C#", "API",],
+    categories: [".Net", "C#", "API", "DevOps", "MVC"],
     summary: "A scalable e-commerce web application built using ASP.NET MVC and Microsoft SQL Server.",
     description: `DVD Central is the main project developed in my ASP.Net class (3rd Term), and half of Advanced Software Development (4th term). \n\nThe project was **developed individually** to practice and improve the knowledge worked in class, including Object Oriented Programming (OOP), **ASP .Net**, **Model-View-Controller (MVC)**, **Mode-View-Viewmodel (MVVM)**, Source control using **Git**, **Microsoft Azure** (DevOps, SQL Database, API Keys), Visual Studio development environment, among others.`,
     video: "https://www.youtube.com/embed/tHnoCH-a7KA?feature=oembed",
@@ -92,7 +92,7 @@ export const projectsData: Project[] = [
     featured: false,
     title: "Space Fighters",
     images: [SpaceFighters],
-    categories: ["C++", "Videogame"],
+    categories: ["C++", "Videogame", "DevOps"],
     summary: "A 2D space shooter game inspired by Galaga, featuring a power-up system, enhanced graphics, and an improved background. Built as a C++ class project.",
     description: "**Space Fighters** is a **2D space shooter game** inspired by *Galaga*, developed as the final project for my *C++* course at Fox Valley Technical College.\n\nOur instructor provided the core structure, and our team of four focused on implementing **extra features** to enhance gameplay.\n\n## Key Features:\n- **Power-Up System:** Defeated enemies had a probability of dropping power-ups, adding strategic depth to the game.\n- **First Implemented Power-Up:** A **red power-up** that increased the ship's attack speed.\n- **Enhanced Graphics:** I redesigned the spaceship and power-up visuals, using distinct color patterns to represent different abilities.\n- **Improved Background Design:** We refined the game's aesthetic for a more modern look.\n\nAs our **first major project** in C++, we faced technical challenges but leveraged creativity to push the game's mechanics forward. While only one power-up was fully implemented due to time constraints, we successfully established the **framework for future expansions**.",
     video: "https://www.youtube.com/embed/JNAJQLihZww?si=ETTBARcbXyD5rp-k",
@@ -134,7 +134,7 @@ export const projectsData: Project[] = [
     featured: true,
     title: "OCEPI Contact Form",
     images: [OCEPIContact1],
-    categories: [".Net", "API", "Dynamics", "jQuery"],
+    categories: [".Net", "API", "Dynamics", "jQuery", "DevOps", "C#", "Form"],
     summary: "A dynamic Contact-Us form with integration to Microsoft Dynamics for Case creation and automatic email sender.",
     description: `During my time as a Software Engineer for the *National Criminal Justice Training Center* (NCJTC), I was requested to create a *Contact-Us* form for **The Online Child Exploitation Prevention Initiative** (OCEPI).\n\nAiming to expand the organization's reach, the contact form must open a way of direct comunication between new customers and the OCEPI committee.\n\nTherefore, I created a new "Contact Us" section at the botton of OCEPI's page. By clicking the main button, a **collapsible panel** or "accordion display" will drop and show the form.\n\n ## Main Features:
     \n- Phone number **format mapping**
@@ -152,7 +152,7 @@ export const projectsData: Project[] = [
     featured: true,
     title: "ICAC Training Meeting Times",
     images: [ICACHome, ICACMeetingTimes],
-    categories: [".Net", "API", "SQL", "jQuery"],
+    categories: [".Net", "API", "SQL", "jQuery", "DevOps", "C#"],
     summary: "New feature to allow Admins to add and modify Meeting times for Training Instances in all ICAC web platforms",
     description: `During my time as a Software Engineer for the *National Criminal Justice Training Center* (NCJTC), our team was requested to design a way to manage and display meeting times for the different trainings available in the **Internet Crimes Against Children Taskforce** (ICAC) website.\n\nTo achieve this, I created a new section in the **Training Details** page of ICAC Admin's site, so that staff members can **modify the Day of week and time schedule**. All changes saved in this page would then reflect at the Training Details page of ICAC's public site.\n\n## Main Features:
     \n- On/Off **toggle** to enable Meeting Times feature and display data in public site
@@ -172,7 +172,7 @@ export const projectsData: Project[] = [
     featured: true,
     title: "NCJTC Performance Update",
     images: [NCJTCHome, NCJTCPayments01, NCJTCPayments02],
-    categories: [".Net", "API", "jQuery" ],
+    categories: [".Net", "API", "jQuery", "DevOps", "C#", "SQL"],
     summary: "A major refactoring and optimization project to improve the loading speed and usability of NCJTC's payments page, reducing load times in half, and implementing new features for a smoother user experience.",
     description: `As the main software engineer at the **National Criminal Justice Training Center (NCJTC)**, I identified and resolved a critical performance issue with the organization's payments page. Previously, users had to wait up to half a minute for the page to load, often causing browsers to freeze or mark the site as *“not responding.”* This issue stemmed from synchronous JavaScript calls and inefficient controller logic that attempted to load all data (registrations, organizations, and payment requests) upfront. To address this, I **redesigned the page's backend and frontend workflows.**
     \n\n## Main Tasks: 
