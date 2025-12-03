@@ -12,8 +12,7 @@ const Hero = () => {
 
         {/* Center Back section - portrait */}
         {/* <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                    w-[75vw]  opacity-40 pointer-events-none"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75vw] opacity-40 pointer-events-none"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}

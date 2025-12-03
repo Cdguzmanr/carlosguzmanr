@@ -1,6 +1,14 @@
 // src/projects.ts
 import type { Blog } from '../types/IBlog'; // Import the interface
 
+// Import images
+import NoImage from '../assets/images/noImage.jpg';
+import InfoIBLogo from '../assets/images/blog/InfoIBLogo.png';
+import InfoIBArticle from '../assets/images/blog/InfoIBArticle.jpg';
+import IBLogo from '../assets/images/blog/IB-Logo.jpg';
+import BIPalmares from '../assets/images/blog/InfoIBLogo.png';
+
+
 export const blogsData: Blog[] = [
     {
         id: 1,
@@ -13,7 +21,7 @@ export const blogsData: Blog[] = [
           {
             title: "Read Full Story",
             url: "https://example.com/full-story",
-            image: "/images/noImage.jpg"
+            image: NoImage
           },
         ]
       },
@@ -22,23 +30,23 @@ export const blogsData: Blog[] = [
         display: true,
         title: "Study Abroad Project: Info IB",
         short: "Project Info IB",
-        images: ['/images/blog/InfoIBLogo.png', '/images/blog/InfoIBArticle.jpg'],
+        images: [InfoIBLogo, InfoIBArticle],
         body: "**One of the most impactful projects** I started, *and a turning point in my life*, was Info IB. This initiative comes from my *passion for studying abroad* since I was 15. For over four years, I invested much of my free time researching pathways to study abroad, often dealing with limited resources and guidance. This pursuit was discouraging at times, yet each new discovery fueled my determination and hope of reaching my dreams.\n\nWhen I joined the **International Baccalaureate (IB) Program**, I discovered many classmates shared my ambition but felt lost and discouraged by the lack of information. With years of personal research behind me, I realized I could support my peers by *sharing my knowledge* to help them overcome the same hurdles I faced.\n\nAt the start of my senior year, I partnered with a friend to launch **Info IB—a project aiming to gather and share study abroad resources for IB students**. We created a section on our school's IB website to post information and webinar notes I had collected over the years to help students explore some of these options. This online resource became a valuable tool for our school, offering guidance and access to a network of educational opportunities. As Info IB grew, I recruited younger students from other classes to expand our project, creating a passionate team to carry over Info IB after my graduation.\n\nLooking for new resources, I came across _[Yondders ](https://www.yondders.com)_, a small non-profit focused on international studies. I met with Marcia Herra, Yondders' founder, and presented Info IB. She **loved our project's vision**, so her team agreed to host a conference at our school and **offer free one-on-one meetings** for interested students.\n\nIn preparation, Info IB gave presentations to **more than 100 IB students** at our school about study-abroad opportunities and introduced Yondders. As a result, the conference was **a huge success**—over 70 students attended, setting a record for Yondders. The team was **impressed by our school's preparation and engagement**, something they hadn't seen before. This success led to a *close partnership with Yondders*. Info IB promoted Yondders' activities in our school and community, boosting their impact on a broader audience, and Yondders provided our institution with bigger and updated educational resources. **Info IB was so successful that, by the end of the year, I managed to secure a full scholarship to study abroad using the resources we had collected**.\n\nReflecting on Info IB, I am proud of our accomplishments, but I see potential for even more growth. With my current knowledge and experience, I would expand the project by building partnerships with more scholarship organizations and universities. I want to provide students with a broader array of resources and direct connections. I would also recruit experts in marketing, international relations, IT specialists, and other fields to address the technical needs that Info IB has today. These improvements would let us provide stronger guidance and expand the project's reach to benefit communities beyond our local area.\n\nThrough Info IB, I learned the power of shared knowledge and collaboration. I experienced firsthand the impact that accessible information can have on a student's path, and I want to help others find theirs.",
         links: [
           {
             title: "Info IB Article",
             url: "https://bipalmares.com/conoce-el-proyecto-cas-info-ib/",
-            image: "/images/blog/InfoIBArticle.png"
+            image: InfoIBArticle
           },
           {
             title: "What is the IB Program?",
             url: "https://www.ibo.org/programmes/diploma-programme/what-is-the-dp/",
-            image: "/images/blog/IB-Logo.jpg"
+            image: IBLogo
           },
           {
             title: "IB Palmares",
             url: "https://bipalmares.com",
-            image: "/images/blog/BIPalmares.png"
+            image: BIPalmares
           }
         ]
       },

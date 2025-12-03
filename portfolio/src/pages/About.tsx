@@ -1,9 +1,12 @@
 // import React from 'react'
+import AboutIntro from "../components/sections/AboutIntro"
+import BlogSection from "../components/sections/BlogSection"
 
 const About = () => {
   return (
     <>
-        <div className="bg-amber-600">About</div>
+        <AboutIntro />
+        <BlogSection />
     </>
   )
 }

@@ -53,7 +53,7 @@ const ProjectsPage: React.FC = () => {
   return (
     <section className="pt-10 pb-16 bg-neutral2 min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
-        <h1 className="text-4xl md:text-5xl font-bebas font-bold text-center text-primary1 mb-8">
+        <h1 className="text-4xl md:text-5xl font-bebas text-center text-primary1 mb-8">
           My Projects
         </h1>
 

@@ -10,7 +10,7 @@ Tier 1: Small/simple projects. Not important. Incomplete
 import { type Project } from '../types/IProject'; // Import the interface
 
 // Import images
-import UnoHome from '../assets/images/projects/UnoHome.jpg';
+import UnoHome from '../assets/images/projects/UnoHome.png';
 import TheHobbyHubHome from '../assets/images/projects/TheHobbyHubHome.png';
 import DVDCentral3 from '../assets/images/projects/DVDCentral3.jpg';
 import Criptografia from '../assets/images/projects/Criptografia.jpg';
