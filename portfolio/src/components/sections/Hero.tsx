@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Resume from '../../assets/files/Carlos Guzman - Software Engineer.pdf';
 import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
 import { useCategoryFilterNav } from '../../hooks/useCategoryFilterNav';
-import portrait from '../../assets/images/portrait-transparent.svg';
+// import portrait from '../../assets/images/portrait-transparent.svg';
 
 const Hero = () => {
   const { handleFilterCategory } = useCategoryFilterNav();
@@ -11,7 +11,7 @@ const Hero = () => {
         <section className='relative bg-linear-to-b from-primary1 to-night min-h-screen flex items-center justify-center overflow-hidden' >
 
         {/* Center Back section - portrait */}
-        <motion.div
+        {/* <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                     w-[75vw]  opacity-40 pointer-events-none"
           initial={{ scale: 0.8, opacity: 0 }}
@@ -23,7 +23,7 @@ const Hero = () => {
             alt="Portrait of Carlos Guzman"
             className="w-full h-auto object-cover"
           />
-        </motion.div>
+        </motion.div> */}
 
         {/* Main Text */}
         <motion.div 

@@ -84,7 +84,7 @@ const ProjectsPage: React.FC = () => {
               placeholder="Search projects..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary2 focus:border-transparent transition-all"
+              className="w-full px-4 py-2 rounded-lg border border-text1 text-text1 focus:outline-none focus:ring-2 focus:ring-primary2 focus:border-transparent transition-all"
             />
           </div>
         </div>
