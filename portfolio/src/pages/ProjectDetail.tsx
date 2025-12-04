@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import { projectsData } from "../data/projectsData";
 import { slugify } from "../utils/helpers";
+import ImageCarousel from "../components/common/ImageCarousel";
 
 // Icons
 import { AiFillGithub } from "react-icons/ai";
@@ -65,14 +66,10 @@ const ProjectDetail: React.FC = () => {
 
           {/* Media Section */}
           <div className="p-8 md:p-10 bg-gray-50">
-            {/* Main Image or Carousel Placeholder */}
-            {/* If you have an ImageCarousel component, put it here. Otherwise, use standard img */}
+
+            {/* Image Carousel */}
             <div className="rounded-xl overflow-hidden shadow-md mb-10">
-              <img 
-                src={project.images[0]} 
-                alt={project.title} 
-                className="w-full h-auto object-cover" 
-              />
+              <ImageCarousel imagesUrl={project.images} />    
             </div>
 
             {/* Video Embed (Responsive) */}

@@ -4,7 +4,7 @@ import type { Blog } from '../types/IBlog'; // Import the interface
 // Import images
 import NoImage from '../assets/images/noImage.jpg';
 import InfoIBLogo from '../assets/images/blog/InfoIBLogo.png';
-import InfoIBArticle from '../assets/images/blog/InfoIBArticle.jpg';
+import InfoIBArticle from '../assets/images/blog/InfoIBArticle.png';
 import IBLogo from '../assets/images/blog/IB-Logo.jpg';
 import BIPalmares from '../assets/images/blog/InfoIBLogo.png';
 

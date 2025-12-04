@@ -58,6 +58,11 @@
 /* ----------------------------------------- Standard Page Design ------------------------------------------------------------- */
 
 /* Utils */
+body {
+  background-color: var(--color-neutral2);
+}
+
+
 .title {
   font-family: 'BebasNeue', sans-serif;
   text-transform: capitalize;

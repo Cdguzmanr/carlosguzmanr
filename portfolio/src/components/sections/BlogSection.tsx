@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import { FaBookReader } from "react-icons/fa";
 import { blogsData } from "../../data/blogsData";
-// import ImageCarousel from "../common/ImageCarousel"; // Uncomment when you migrate your carousel
+import ImageCarousel from "../common/ImageCarousel"; // Uncomment when you migrate your carousel
 
 const BlogSection: React.FC = () => {
   const visibleBlogs = blogsData.filter((blog) => blog.display);
@@ -102,12 +102,12 @@ const BlogSection: React.FC = () => {
                   </h3>
 
                   {/* Image Carousel Placeholder */}
-                  {/* {blog.images && blog.images.length > 0 && (
+                  {blog.images && blog.images.length > 0 && (
                     <div className="mb-8 rounded-lg overflow-hidden shadow-md">
                        <ImageCarousel imagesUrl={blog.images} /> 
-                       <img src={blog.images[0]} alt={blog.title} className="w-full object-cover" />
+                       {/* <img src={blog.images[0]} alt={blog.title} className="w-full object-cover" /> */}
                     </div>
-                  )} */}
+                  )}
 
                   {/* Markdown Content */}
                   <div className="markdown prose prose-lg max-w-none text-text1 prose-headings:font-bebas prose-headings:text-primary1 prose-a:text-primary2 prose-strong:text-primary1">
