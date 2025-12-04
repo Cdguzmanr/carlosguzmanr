@@ -37,11 +37,12 @@ const AnimatedRoutes = () => {
 
 
     return (
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname} > 
                 
                 <Route path="/" element={ <PageWrapper> <Home /> </PageWrapper>} />
                 <Route path="/projects" element={<Projects />} /> 
+                {/* <Route path="/projects" element={<PageWrapper> <Projects /> </PageWrapper>} /> */}
                 <Route path="/project/:slug" element={<PageWrapper> <ProjectDetail /> </PageWrapper>} />
                 <Route path="/about" element={<PageWrapper> <About /> </PageWrapper>} />
             
