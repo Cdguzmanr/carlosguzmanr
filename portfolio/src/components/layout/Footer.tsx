@@ -27,29 +27,49 @@ const Footer = () => {
           </div>
 
           {/* -------------------------------------------------------------- */}
-
+          
           <div id="Contact" className="w-full md:w-1/2 lg:w-1/4 mb-8">
             <h6 className="text-neutral2 font-bebas text-3xl mb-4">Contact Me</h6>
             <div className="w-full max-w-xs">
-            <p className="text-neutral2 font-caviardreams pb-2">Email Address:</p>
+              <p className="text-neutral2 font-caviardreams pb-2">Email Address:</p>
               <div className="relative">
                 <label htmlFor="email-copy-text" className="sr-only">email</label>
+                
                 <button
-                  onClick={handleCopy} 
-                  id="email-copy-text" 
-                  // Deleted focus functionality: focus:ring-[color] focus:border-[color]
-                  className="font-caviardreams bg-gray-300 border border-gray-300 text-neutral2 text-sm rounded-lg  block w-full px-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-neutral2 dark:focus:ring-blue-500 dark:focus:border-blue-500 text-left"
+                  onClick={handleCopy}
+                  id="email-copy-text"
+                  className="
+                    group
+                    relative
+                    block w-full rounded-lg px-2.5 py-4 text-left
+                    font-caviardreams text-sm text-neutral2
+                    border border-primary1
+                    bg-primary1
+                    hover:bg-night hover:border-night
+                    transition-colors duration-300 ease-in-out
+                    cursor-pointer
+                  "
                 >
                   {Email}
 
-                  {/* Nested Button */}
-                  <div 
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-neutral2 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-lg py-2 px-2.5 inline-flex items-center justify-center bg-white border-gray-200 border"
+                  {/* Inner Badge / Status Indicator */}
+                  <span
+                    className="
+                      absolute right-2.5 top-1/2 -translate-y-1/2 
+                      inline-flex items-center justify-center 
+                      rounded-lg py-2 px-3
+                      border border-primary2/30
+                      bg-night/20
+                      text-neutral2
+                      group-hover:bg-primary2 group-hover:text-text2 group-hover:border-primary2
+                      transition-all duration-300
+                    "
                   >
                     {isCopied ? (
                       <span className="inline-flex items-center">
-                        <FaRegClipboard className="w-3 h-3 text-blue-700 dark:text-blue-500 mr-1.5" />
-                        <span className="text-xs font-semibold text-blue-700 dark:text-blue-500">Copied</span>
+                        {/* Used primary2 (Gold) for the success state icon */}
+                        <FaRegClipboard className="w-3 h-3 text-primary2 group-hover:text-text2 mr-1.5" />
+                        <span className="text-xs font-semibold text-primary2 group-hover:text-text2">Copied</span>
                       </span>
                     ) : (
                       <span className="inline-flex items-center">
@@ -57,11 +77,12 @@ const Footer = () => {
                         <span className="text-xs font-semibold">Copy</span>
                       </span>
                     )}
-                  </div>
+                  </span>
                 </button>
               </div>
             </div>
           </div>
+          
 
           {/* -------------------------------------------------------------- */}
 
