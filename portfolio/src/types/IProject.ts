@@ -1,4 +1,15 @@
 // src/types.ts
+
+// Link types to control icons and styling
+export type LinkType = 'github' | 'game' | 'live' | 'other';
+
+// 2. Define the structure of a single link
+export interface ProjectLink {
+  url: string;
+  type: LinkType;
+  label?: string; // Optional: To override default text (e.g., "Visit V1")
+}
+
 export interface Project {
     id: number,
     tier: number; // used to order display (descendent). lower means less impressive, higher will display first.
@@ -7,10 +18,10 @@ export interface Project {
     title: string;
     images: Array<string>;
     categories: Array<string>;
-    summary: string, // short text for the card version descriptio
+    summary: string, // short text for the card version description
     description: string; // larger text to display in the focused project view
-    video: string; // embeded youtube video link
-    link: string; // link to the git-hub repo with the source code 
-    play: string; // link to try videogame online
+    video?: string; // embeded youtube demo video link
+
+    links: ProjectLink[]; // array of links with type and url
   }
   

@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import "../../styles/embla.css";
 
-import ProjectCard from "./CardPro";
+import ProjectCard from "./ProjectCard";
 import { type Project } from "../../types/IProject";
 import { sortProjects } from "../../utils/sortProjects";
 

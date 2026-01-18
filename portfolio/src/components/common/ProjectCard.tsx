@@ -79,10 +79,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           Read More
         </Link>
 
-        {/* Play Button (Only if game link exists) */}
-        {project.play && (
+        {/* Play Button (Only if project has a link of type 'game') */}
+        {project.links && project.links.some(link => link.type === 'game') && (
           <a 
-            href={project.play}
+            href={project.links.find(link => link.type === 'game')?.url}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full p-3 bg-primary2 text-white shadow-md hover:scale-110 hover:bg-accent1 transition-all duration-300"

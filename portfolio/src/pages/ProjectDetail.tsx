@@ -6,33 +6,58 @@ import remarkBreaks from "remark-breaks";
 import { projectsData } from "../data/projectsData";
 import { slugify } from "../utils/helpers";
 import ImageCarousel from "../components/common/ImageCarousel";
+import { type ProjectLink } from "../types/IProject"; // Import types
 
 // Icons
 import { AiFillGithub } from "react-icons/ai";
 import { IoGameController } from "react-icons/io5";
+import { FaGlobe, FaExternalLinkAlt } from "react-icons/fa"; // New icons
 
 const ProjectDetail: React.FC = () => {
-  // 1. Get the slug string from the URL
   const { slug } = useParams<{ slug: string }>();
-  
-  // 2. Find the project where the slugified title matches the URL
   const project = projectsData.find((p) => slugify(p.title) === slug);
 
-  // Scroll to top on load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  // 404 State
+  // --- Helper to determine Style and Icon based on Type ---
+  const getLinkConfig = (link: ProjectLink) => {
+    switch (link.type) {
+      case 'github':
+        return {
+          icon: <AiFillGithub size={20} />,
+          text: link.label || "Source Code",
+          // Dark button for code
+          style: "bg-text1 hover:bg-night text-white" 
+        };
+      case 'game':
+        return {
+          icon: <IoGameController size={20} />,
+          text: link.label || "Play Now",
+          // Primary Green for Games (Action)
+          style: "bg-primary1 hover:bg-primary1/90 text-white" 
+        };
+      case 'live':
+        return {
+          icon: <FaGlobe size={18} />,
+          text: link.label || "Visit Site",
+          // Accent Blue or Gold for Websites
+          style: "bg-accent1 hover:bg-accent1/90 text-white" 
+        };
+      default:
+        return {
+          icon: <FaExternalLinkAlt size={16} />,
+          text: link.label || "Open Link",
+          style: "bg-primary2 hover:bg-primary2-dark text-neutral1"
+        };
+    }
+  };
+
   if (!project) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-neutral2 px-6 text-center">
-        <h1 className="text-4xl font-bebas text-primary1 mb-4">Project Not Found</h1>
-        <p className="text-text1 mb-8">The project you are looking for does not exist.</p>
-        <Link to="/projects" className="bg-primary2 text-neutral1 px-6 py-2 rounded shadow hover:bg-primary1 transition-colors">
-          Back to Projects
-        </Link>
-      </div>
+       /* ... keep your existing 404 return ... */
+       <div className="min-h-screen flex items-center justify-center">Project Not Found</div>
     );
   }
 
@@ -48,13 +73,11 @@ const ProjectDetail: React.FC = () => {
         {/* Content Container */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
           
-          {/* Header Section */}
-          <div className="p-8 md:p-10 border-b border-gray-100">
+          {/* ... Header Section (Unchanged) ... */}
+           <div className="p-8 md:p-10 border-b border-gray-100">
             <h1 className="text-3xl md:text-5xl font-bebas text-primary1 mb-6 text-center">
               {project.title}
             </h1>
-            
-            {/* Categories */}
             <div className="flex flex-wrap justify-center gap-3">
               {project.categories.map((cat) => (
                 <span key={cat} className="bg-primary1/10 text-primary1 px-3 py-1 rounded-full text-sm font-semibold">
@@ -64,15 +87,11 @@ const ProjectDetail: React.FC = () => {
             </div>
           </div>
 
-          {/* Media Section */}
+          {/* Media Section (Unchanged) */}
           <div className="p-8 md:p-10 bg-gray-50">
-
-            {/* Image Carousel */}
             <div className="rounded-xl overflow-hidden shadow-md mb-10">
               <ImageCarousel imagesUrl={project.images} />    
             </div>
-
-            {/* Video Embed (Responsive) */}
             {project.video && (
               <div className="relative w-full rounded-xl overflow-hidden shadow-md mb-10 pt-[56.25%] bg-black">
                 <iframe
@@ -93,36 +112,33 @@ const ProjectDetail: React.FC = () => {
               </ReactMarkdown>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 pt-8 border-t border-gray-100">
-              {/* GitHub Link */}
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center gap-2 bg-text1 text-white px-6 py-3 rounded-lg hover:bg-black transition-colors shadow-md font-medium"
-                >
-                  <AiFillGithub size={20} />
-                  View Source Code
-                </a>
-              )}
-
-              {/* Play/Live Link */}
-              {project.play && (
-                <a
-                  href={project.play}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center gap-2 bg-primary2 text-white px-6 py-3 rounded-lg hover:bg-primary1 transition-colors shadow-md font-medium"
-                >
-                  <IoGameController size={20} />
-                  Play Now
-                </a>
-              )}
-            </div>
+            {/* NEW DYNAMIC LINK SECTION */}
+            {project.links && project.links.length > 0 && (
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mt-12 pt-8 border-t border-gray-100">
+                {project.links.map((link, index) => {
+                  const config = getLinkConfig(link);
+                  
+                  return (
+                    <a
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`
+                        flex items-center justify-center gap-2 px-6 py-3 rounded-lg 
+                        transition-colors shadow-md font-medium min-w-[200px]
+                        ${config.style}
+                      `}
+                    >
+                      {config.icon}
+                      <span>{config.text}</span>
+                    </a>
+                  );
+                })}
+              </div>
+            )}
+            
           </div>
-
         </div>
       </div>
     </div>
