@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Resume from '../../assets/files/Carlos Guzman - Software Engineer.pdf';
+import Resume from '../../assets/files/Carlos Guzman - Software Engineer 2026.pdf';
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { useCategoryFilterNav } from '../../hooks/useCategoryFilterNav';
 

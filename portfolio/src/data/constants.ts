@@ -5,7 +5,7 @@ export const navItems = [
     // {label: "Contact", href: "/contact"},
 ];
 
-export const Resume = "/src/assets/files/Carlos Guzman - Software Engineer.pdf";
+export const Resume = "/src/assets/files/Carlos Guzman - Software Engineer 2026.pdf";
 
 export const Email = "cguzmanr17@gmail.com"
 // export const Email = "contact@carlosguzmanr.com"
