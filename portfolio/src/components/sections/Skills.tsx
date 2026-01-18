@@ -35,14 +35,14 @@ const Skills = () => {
       category: "Languages",
       skills: [
         { name: "C Sharp", icon: <TbBrandCSharp />, star: true },
+        { name: "HTML5", icon: <FaHtml5 />, star: true },
+        { name: "CSS3", icon: <FaCss3Alt />, star: true },
         { name: "C++", icon: <SiCplusplus /> },
         { name: "Java", icon: <FaJava /> },
         { name: "JavaScript", icon: <SiJavascript /> },
         { name: "TypeScript", icon: <SiTypescript /> },
         { name: "Python", icon: <FaPython /> },
         { name: "PHP", icon: <SiPhp /> },
-        { name: "HTML5", icon: <FaHtml5 /> },
-        { name: "CSS3", icon: <FaCss3Alt /> },
       ],
     },
     {
@@ -60,19 +60,19 @@ const Skills = () => {
       category: "Tools",
       skills: [
         { name: "Azure DevOps", icon: <VscAzureDevops  />, star: true },
-        { name: "Git", icon: <FaGitAlt /> },
+        { name: "Git", icon: <FaGitAlt />, star: true },
+        { name: "Visual Studio", icon: <DiVisualstudio />, star: true },
+        { name: "VS Code", icon: <BiLogoVisualStudio />, star: true },
         { name: "GitHub", icon: <FaGithub /> },
         { name: "Bitbucket", icon: <FaBitbucket /> },
         { name: "Android Studio", icon: <SiAndroidstudio /> },
-        { name: "Visual Studio", icon: <DiVisualstudio />, star: true },
-        { name: "VS Code", icon: <BiLogoVisualStudio />, star: true },
       ],
     },
     {
       category: "Platforms",
       skills: [
+        { name: "SQL Server", icon: <DiMsqlServer />, star: true },
         { name: "Microsoft Azure", icon: <VscAzure /> },
-        { name: "SQL Server", icon: <DiMsqlServer /> },
       ],
     },
   ];
@@ -87,6 +87,22 @@ const Skills = () => {
           <h2 className="font-bebas text-4xl text-center mb-8 text-primary1">
             Skills
           </h2>
+
+          {/* Legend describing the color coding: Green = Professional Experience: I have extensive experience with these skills in a professional background | Brown = Educational Experience: I have used these skills in an academic setting */}
+
+          <div>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-10 mb-10">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 bg-primary1 inline-block rounded-lg"></span>
+                <span className="text-text2">Professional Experience</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 bg-primary2 inline-block rounded-lg"></span>
+                <span className="text-text2">Educational Experience</span>
+              </div>
+            </div>
+
+          </div>
           <div className="grid gap-8">
             {skillsData.map((group, index) => (
               <motion.div
