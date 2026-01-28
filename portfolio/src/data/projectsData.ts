@@ -248,7 +248,7 @@ export const projectsData: Project[] = [
     categories: ["React", "Typescript", "Tailwind CSS", "Node.js", "Next.js", "Vite", "Vercel", "Cloudflare"],
     summary: "My latest portfolio built with React & Vite. Features custom UI/UX design, animations, and IPv6 support via Cloudflare.",
     description: `# The Evolution of My Portfolio
-    \This website is arguably the biggest project I've worked on. It represents my journey from a student learning the basics to a professional developer passionate about UI/UX. Here is the story of how it has evolved over the years.
+    \nThis website is arguably the biggest project I've worked on. It represents my journey from a student learning the basics to a professional developer passionate about UI/UX. Here is the story of how it has evolved over the years.
     \n## V1.0: The Beginning (Early 2024)
     \nI started building the first version of my portfolio website during my final semester at **Fox Valley Tech**. As graduation approached, I knew I needed a central hub to showcase my work to potential employers.
     \nAfter some research, I chose a modern tech stack: **React, Next.js, Typescript** and **Tailwind CSS**.
