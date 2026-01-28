@@ -248,11 +248,11 @@ export const projectsData: Project[] = [
     categories: ["React", "Typescript", "Tailwind CSS", "Node.js", "Next.js", "Vite", "Vercel", "Cloudflare"],
     summary: "My latest portfolio built with React & Vite. Features custom UI/UX design, animations, and IPv6 support via Cloudflare.",
     description: `# The Evolution of My Portfolio
-    \nThis website isn't just a container for my work; it is one of my biggest projects in itself. It represents my journey from a student learning the basics to a professional developer passionate about UI/UX. Here is the story of how it has evolved over the years.
+    \This website is arguably the biggest project I've worked on. It represents my journey from a student learning the basics to a professional developer passionate about UI/UX. Here is the story of how it has evolved over the years.
     \n## V1.0: The Beginning (Early 2024)
-    \nI started building the first version of this site during my final semester at **Fox Valley Tech**. As graduation approached, I knew I needed a central hub to showcase my work to potential employers.
+    \nI started building the first version of my portfolio website during my final semester at **Fox Valley Tech**. As graduation approached, I knew I needed a central hub to showcase my work to potential employers.
     \nAfter some research, I chose a modern tech stack: **React, Next.js, Typescript** and **Tailwind CSS**.
-    \nThere was just one small problem: **I didn't know how to use any of them**. They weren't part of my school curriculum, but I didn't let that stop me. I dove into documentation, watched YouTube tutorials, and dug into Stack Overflow to fix every tricky error.
+    \nThere was just one small problem: **I didn't know how to use any of them**. They weren't part of my school curriculum, but I didn't let that stop me. I dove into documentation, watched hours of YouTube tutorials, and dug into Stack Overflow to fix every tricky error.
     \n- **The Result:** A simple site deployed via Vercel.
     \n- **The Win:** It wasn't perfect, but I was incredibly proud of it. It became a handy tool during job fairs, allowing me to easily walk recruiters through my resume and projects on the fly.
     \n## V2.0: The Upgrade (Late 2024)
