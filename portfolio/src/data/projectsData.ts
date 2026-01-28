@@ -24,9 +24,9 @@ import NCJTCHome from '../assets/images/projects/NCJTCHome.jpeg';
 import NCJTCPayments01 from '../assets/images/projects/NCJTCPayments01.png';
 import NCJTCPayments02 from '../assets/images/projects/NCJTCPayments02.png';
 import Portfolio1to3 from '../assets/images/projects/Portfolio1to3.png';
-import PortfolioV1 from '../assets/images/projects/PortfolioV1.png';
-import PortfolioV2 from '../assets/images/projects/PortfolioV2.png';
-import PortfolioV3 from '../assets/images/projects/PortfolioV3.png';
+import PortfolioV1 from '../assets/images/projects/Portfoliov1.png';
+import PortfolioV2 from '../assets/images/projects/Portfoliov2.png';
+import PortfolioV3 from '../assets/images/projects/Portfoliov3.png';
 
 
 
