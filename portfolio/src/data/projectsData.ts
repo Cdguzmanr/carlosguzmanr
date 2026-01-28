@@ -14,7 +14,6 @@ import UnoHome from '../assets/images/projects/UnoHome.png';
 import TheHobbyHubHome from '../assets/images/projects/TheHobbyHubHome.png';
 import DVDCentral3 from '../assets/images/projects/DVDCentral3.jpg';
 import Criptografia from '../assets/images/projects/Criptografia.jpg';
-
 import SpaceFighters from '../assets/images/projects/SpaceFighters.jpg';
 import GroceryListDemo from '../assets/images/projects/GroceryListDemo.jpg';
 import GalleryAppDemo from '../assets/images/projects/GalleryAppDemo.jpg';
@@ -24,6 +23,10 @@ import ICACMeetingTimes from '../assets/images/projects/ICACMeetingTimes.jpg';
 import NCJTCHome from '../assets/images/projects/NCJTCHome.jpeg';
 import NCJTCPayments01 from '../assets/images/projects/NCJTCPayments01.png';
 import NCJTCPayments02 from '../assets/images/projects/NCJTCPayments02.png';
+import Portfolio1to3 from '../assets/images/projects/Portfolio1to3.png';
+import PortfolioV1 from '../assets/images/projects/PortfolioV1.png';
+import PortfolioV2 from '../assets/images/projects/PortfolioV2.png';
+import PortfolioV3 from '../assets/images/projects/PortfolioV3.png';
 
 
 
@@ -234,5 +237,64 @@ export const projectsData: Project[] = [
       }
     ]
   },
+
+  {
+    id: 11,
+    tier: 4,
+    date: "2026-01",
+    featured: true,
+    title: "Web Portfolio",
+    images: [Portfolio1to3, PortfolioV1, PortfolioV2, PortfolioV3],
+    categories: ["React", "Typescript", "Tailwind CSS", "Node.js", "Next.js", "Vite", "Vercel", "Cloudflare"],
+    summary: "My latest portfolio built with React & Vite. Features custom UI/UX design, animations, and IPv6 support via Cloudflare.",
+    description: `# The Evolution of My Portfolio
+    \nThis website isn't just a container for my work; it is one of my biggest projects in itself. It represents my journey from a student learning the basics to a professional developer passionate about UI/UX. Here is the story of how it has evolved over the years.
+    \n## V1.0: The Beginning (Early 2024)
+    \nI started building the first version of this site during my final semester at **Fox Valley Tech**. As graduation approached, I knew I needed a central hub to showcase my work to potential employers.
+    \nAfter some research, I chose a modern tech stack: **React, Next.js, Typescript** and **Tailwind CSS**.
+    \nThere was just one small problem: **I didn't know how to use any of them**. They weren't part of my school curriculum, but I didn't let that stop me. I dove into documentation, watched YouTube tutorials, and dug into Stack Overflow to fix every tricky error.
+    \n- **The Result:** A simple site deployed via Vercel.
+    \n- **The Win:** It wasn't perfect, but I was incredibly proud of it. It became a handy tool during job fairs, allowing me to easily walk recruiters through my resume and projects on the fly.
+    \n## V2.0: The Upgrade (Late 2024)
+    \nAfter landing a developer job and improving my skills, I felt ready to tackle "Version 2.0." The original site worked, but I had missed out on features I really wanted, like project carousels and dynamic pages, because I simply didn't have the *know-how* at the time.
+    \nFor this version, I started from scratch with a brand new GitHub repo. I focused on **React best practices**, better file management, and coding principles. I also integrated more complex libraries:
+    \n- **React-slick** for carousel components.
+    \n- **Framer-motion** for page animations.
+    \n- **Dynamic Routing** to create dedicated "Project Description" pages with personalized slugs.
+    \n- **Search & Filter** functionality to sort projects by category.
+    \nThis version was a massive leap forward. I started seeing organic traffic via Vercel analytics and received great feedback.
+    \n## V3.0: The Professional Polish & Networking Challenge (Late 2025)
+    \nBy late 2025, after nearly a year of working as a Full Stack Software Engineer, my technical skills had grown exponentially. I knew I could do better, so I started development on Portfolio 3.0.
+    \nWhile I wanted to improve the design, the *real* push for a rewrite came from a specific technical hurdle. When I transferred to **UW-Green Bay** for my Computer Science degree, I discovered my V2 portfolio **didn't work on the school's WiFi**.
+    \nAfter hours of research, headaches, and emails with the IT department, I learned a hard lesson in networking: secure networks (like those in schools and government) often enforce strict IP security requiring **IPv6 (AAAA)** certificates. My hosting provider at the time (Vercel) only supported IPv4 for my tier.
+    \n### The Solution: New Host, New Stack
+    \nI had to pivot. I found that **Cloudflare Pages** offered excellent hosting for static sites with full IPv6 support. Since I was starting a new repo to solve the hosting issue, I decided to experiment with my tech stack as well.
+    \nI switched from Next.js (a full framework) to **Vite** (a modern build tool) to experience the "other side" of the React ecosystem. I applied my new design skills, creating wireframes in Figma and choosing a professional color palette, and got to work. 
+    \n### The sprint
+    \nI was so focused in the project that I barely felt time passing. I spent long nights coding, fueled by excitement rather than caffeine (I dont drink coffee). In under two weeks, I had a brand new, optimized, and fully accessible site up and running.
+    \nThis project didn't just give me a website; it validated that I picked the right field. I genuinely love this work.
+    \n## See the Growth Yourself
+    \nI am incredibly proud of my progress, which is perfectly reflected in these different versions. I've kept the old versions live so you can explore them and see the growth with your own eyes. Find the links below.
+    `,
+    video: "",
+    links: [
+      {
+        type: 'live',
+        url: "https://carlosguzman1.vercel.app",
+        label: "Visit Portfolio v1"
+      },
+      {
+        type: 'live',
+        url: "https://carlosguzmanr.vercel.app",
+        label: "Visit Portfolio v2"
+      },
+      {
+        type: 'live',
+        url: "https://carlosguzmanr.com",
+        label: "Visit Portfolio v3"
+      }
+    ]
+  },
+  
   
 ];

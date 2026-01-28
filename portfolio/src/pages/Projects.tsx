@@ -78,7 +78,7 @@ const ProjectsPage: React.FC = () => {
           </div>
 
           {/* Search Input */}
-          <div className="w-full md:w-64">
+          <div className="w-full md:w-96">
             <input
               type="text"
               placeholder="Search projects..."
