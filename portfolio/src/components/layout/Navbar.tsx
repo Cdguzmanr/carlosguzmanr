@@ -5,7 +5,7 @@ import { navItems } from '../../data/constants';
 import Resume from '../../assets/files/Carlos Guzman - Software Engineer 2026.pdf';
 import HoverLink from '../common/HoverLink';
 
-const LogoUrl = "https://placehold.co/50x50/E5DED6/003F1C?text=CG";
+// const LogoUrl = "https://placehold.co/50x50/E5DED6/003F1C?text=CG";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,12 +39,12 @@ const Navbar = () => {
           {/* LEFT: Logo + Name */}
           <div className="flex items-center gap-4 z-50">
             <Link to="/" onClick={handleLinkClick} className="flex items-center gap-3">
-              <img
+              {/* <img
                 src={LogoUrl}
                 alt="Carlos Guzman Logo"
                 className={`rounded-full object-cover border-2 border-neutral1 transition-all duration-300
                 ${scrolled ? 'h-8 w-8' : 'h-10 w-10'}`}
-              />
+              /> */}
               <span
                 className={`font-bebas tracking-wide transition-all duration-300
                 ${scrolled ? 'text-2xl' : 'text-3xl'}`}
