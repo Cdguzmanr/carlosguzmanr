@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-neutral2 sm:mx-auto lg:my-8" />
         <div className="flex justify-center items-center">
-          <p className="text-primary1 font-semibold font-caviardreams">&copy; {new Date().getFullYear()} All Rights Reserved by <a href="#" className="text-neutral2 font-caviardreams">Carlos Guzman</a>.</p>
+          <p className="text-primary1 font-semibold font-caviardreams">&copy; {new Date().getFullYear()} All Rights Reserved by <a href="" className="text-neutral2 font-caviardreams">Carlos Guzman</a>.</p>
           <ul className="flex space-x-4">
             {/* Include list of buttons as desired */}
             {/* <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook"></i></a></li>

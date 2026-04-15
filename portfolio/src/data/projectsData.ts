@@ -27,6 +27,7 @@ import Portfolio1to3 from '../assets/images/projects/Portfolio1to3.png';
 import PortfolioV1 from '../assets/images/projects/Portfoliov1.png';
 import PortfolioV2 from '../assets/images/projects/Portfoliov2.png';
 import PortfolioV3 from '../assets/images/projects/Portfoliov3.png';
+// import GDGHero from '../assets/images/projects/GDGHero.png';
 
 
 
@@ -245,7 +246,7 @@ export const projectsData: Project[] = [
     featured: true,
     title: "Web Portfolio",
     images: [Portfolio1to3, PortfolioV1, PortfolioV2, PortfolioV3],
-    categories: ["React", "Typescript", "Tailwind CSS", "Node.js", "Next.js", "Vite", "Vercel", "Cloudflare"],
+    categories: ["React", "Typescript", "Tailwind CSS", "Node.js", "Next.js", "Vite", "Vercel", "Cloudflare", "UI/UX"],
     summary: "My latest portfolio built with React & Vite. Features custom UI/UX design, animations, and IPv6 support via Cloudflare.",
     description: `# The Evolution of My Portfolio
     \nThis website is arguably the biggest project I've worked on. It represents my journey from a student learning the basics to a professional developer passionate about UI/UX. Here is the story of how it has evolved over the years.
@@ -295,6 +296,43 @@ export const projectsData: Project[] = [
       }
     ]
   },
+  // {
+  //   id: 12,
+  //   tier: 4,
+  //   date: "2026-03",
+  //   featured: true,
+  //   title: "Google Developer Group",
+  //   images: [GDGHero],
+  //   categories: ["React", "Typescript", "Tailwind CSS", "Node.js", "Vite", "Cloudflare", "UI/UX"],
+  //   summary: "A custom platform for the Google Developer Group at UW-Green Bay, built with React, TypeScript, and Vite. Features advanced SVG masking, infinite scroll animations, and strict adherence to Google's Material Design guidelines.",
+  //   description: `# Building the Digital Home for GDG UW-Green Bay
+  //   \nIn late 2025, alongside an amazing team, we founded the official Google Developer Group (GDG) chapter at the University of Wisconsin-Green Bay. As the chapter's Secretary and lead developer, I recognized early on that we needed a centralized "master tool" for our community.
+  //   \nWhile Google provides an official event platform (gdg.community.dev), we needed a personalized digital presentation card to showcase our yearly roadmap, attract students to our recurring events (like our flagship Hack GB), and proudly display our sponsors.
+  //   \n## The Design Challenge: Making it "Googly"
+  //   \nBecause we are an official Google community, it was imperative that the site adhered strictly to Google's brand guidelines. However, I didn't want it to look like a boring corporate template.
+  //   \nI took heavy inspiration from the **Google Visitor Experience** website. I wanted our site to embody that same dynamic, welcoming, and modern energy. This meant implementing specific, non-standard UI elements using **React, TypeScript, Tailwind CSS, and Vite**.
+  //   \n## Engineering the Details
+  //   \nBuilding a UI that looks effortlessly clean often requires complex underlying code. Here are a few technical hurdles I tackled to bring this design to life:
+  //   \n### 1. The "Telly" Shape (SVG Masking)
+  //   \nGoogle's modern Material You design frequently uses a specific "bloated square" or convex shape (internally known as the "Telly"). Standard CSS border-radius couldn't achieve this look, so I had to create a custom **SVG mask**. This involved designing the shape in Figma, exporting it as an SVG, and then integrating it into the React components to mask images and sections dynamically.
+  //   \n### 2. High-Performance Infinite Scrolling
+  //   \nTo showcase our university and corporate sponsors, I needed a smooth, continuous stock-ticker style carousel. I utilized Embla Carousel, but faced a classic issue: the loop breaks when there isn't enough content to overflow the screen.
+  //   \nTo solve this, I implemented a dynamic cloning mechanism that duplicates the sponsor logos until the total width exceeds the viewport. This way, the carousel can loop infinitely without any jank or performance issues.
+  //   \n## Scalable Architecture
+  //   \nBeyond the visuals, I treated this as a production-level product. I structured the data layer to separate Event Types (e.g., "Resume Workshop") from Event Instances (e.g., "February 24th at the Union").
+  //   \nThis CMS-style architecture means future GDG organizers can easily add new dates for recurring events without having to duplicate descriptions or rewrite complex code.
+  //   \n## The Takeaway
+  //   \nThis project allowed me to perfectly merge my passion for UI/UX design with strict engineering practices. It stands as a testament to how far my skills have come, from struggling to deploy my first Vercel site, to architecting a scalable, highly-polished web application for a thriving university community.
+  //   `,
+  //   video: "",
+  //   links: [
+  //     {
+  //       type: 'live',
+  //       url: "https://gdg.uwgb.edu/",
+  //       label: "Google Developer Group - UW Green Bay",
+  //     },
+  //   ], 
+  // },
   
   
 ];
