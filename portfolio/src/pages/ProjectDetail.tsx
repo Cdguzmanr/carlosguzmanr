@@ -29,21 +29,21 @@ const ProjectDetail: React.FC = () => {
           icon: <AiFillGithub size={20} />,
           text: link.label || "Source Code",
           // Dark button for code
-          style: "bg-text1 hover:bg-night text-white" 
+          style: "bg-text1 hover:bg-night text-white"
         };
       case 'game':
         return {
           icon: <IoGameController size={20} />,
           text: link.label || "Play Now",
           // Primary Green for Games (Action)
-          style: "bg-primary1 hover:bg-primary1/90 text-white" 
+          style: "bg-primary1 hover:bg-primary1/90 text-white"
         };
       case 'live':
         return {
           icon: <FaGlobe size={18} />,
           text: link.label || "Visit Site",
           // Accent Blue or Gold for Websites
-          style: "bg-accent1 hover:bg-accent1/90 text-white" 
+          style: "bg-accent1 hover:bg-accent1/90 text-white"
         };
       default:
         return {
@@ -56,15 +56,15 @@ const ProjectDetail: React.FC = () => {
 
   if (!project) {
     return (
-       /* ... keep your existing 404 return ... */
-       <div className="min-h-screen flex items-center justify-center">Project Not Found</div>
+      /* ... keep your existing 404 return ... */
+      <div className="min-h-screen flex items-center justify-center">Project Not Found</div>
     );
   }
 
   return (
     <div className="bg-neutral2 min-h-screen pt-8 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        
+
         {/* Breadcrumb */}
         <Link to="/projects" className="text-text1 hover:text-primary2 mb-6 inline-block font-medium">
           &larr; Back to Projects
@@ -72,9 +72,9 @@ const ProjectDetail: React.FC = () => {
 
         {/* Content Container */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-          
+
           {/* ... Header Section (Unchanged) ... */}
-           <div className="p-8 md:p-10 border-b border-gray-100">
+          <div className="p-8 md:p-10 border-b border-gray-100">
             <h1 className="text-3xl md:text-5xl font-bebas text-primary1 mb-6 text-center">
               {project.title}
             </h1>
@@ -90,7 +90,7 @@ const ProjectDetail: React.FC = () => {
           {/* Media Section (Unchanged) */}
           <div className="p-8 md:p-10 bg-gray-50">
             <div className="rounded-xl overflow-hidden shadow-md mb-10">
-              <ImageCarousel imagesUrl={project.images} />    
+              <ImageCarousel imagesUrl={project.images} />
             </div>
             {project.video && (
               <div className="relative w-full rounded-xl overflow-hidden shadow-md mb-10 pt-[56.25%] bg-black">
@@ -117,7 +117,7 @@ const ProjectDetail: React.FC = () => {
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mt-12 pt-8 border-t border-gray-100">
                 {project.links.map((link, index) => {
                   const config = getLinkConfig(link);
-                  
+
                   return (
                     <a
                       key={index}
@@ -137,7 +137,7 @@ const ProjectDetail: React.FC = () => {
                 })}
               </div>
             )}
-            
+
           </div>
         </div>
       </div>

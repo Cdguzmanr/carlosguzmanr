@@ -27,20 +27,28 @@ import Portfolio1to3 from '../assets/images/projects/Portfolio1to3.png';
 import PortfolioV1 from '../assets/images/projects/Portfoliov1.png';
 import PortfolioV2 from '../assets/images/projects/Portfoliov2.png';
 import PortfolioV3 from '../assets/images/projects/Portfoliov3.png';
+import CampusCoin1 from '../assets/images/projects/CampusCoin-NewSignUpScreen.png';
+import CampusCoin2 from '../assets/images/projects/CampusCoin-Dashboard.png';
+import CampusCoin3 from '../assets/images/projects/CampusCoin-CampusNavigator.png';
+import CampusCoin4 from '../assets/images/projects/CampusCoin-ManageFinances.png';
+import CampusCoin5 from '../assets/images/projects/CampusCoin-Settings.png';
+import TaleTailor1 from '../assets/images/projects/TaleTailor-Home.png';
+import TaleTailor2 from '../assets/images/projects/TaleTailor-ChooseYourTale.png';
+import TaleTailor3 from '../assets/images/projects/TaleTailor-Storyline1.png';
 // import GDGHero from '../assets/images/projects/GDGHero.png';
 
 
 
 
 export const projectsData: Project[] = [
-    {
+  {
     id: 1,
     tier: 4,
     date: "2024-05",
     featured: true,
     title: "Uno Park",
     images: [UnoHome],
-    categories: ["Unity", "API", "C#", "Videogame", "3D" ],
+    categories: ["Unity", "API", "C#", "Videogame", "3D"],
     summary: "Uno Park is a fully-featured 3D game developed using C# and Unity game engine. A re-design of the classic UNO experience.",
     description: `**"Uno Park"** is a 3D Unity game developed as my final project for the Software Development AAS program at Fox Valley Technical College. \n\nWhile most classmates created 2D games and programs, I chose to self-learn *Unity 3D* for a more challenging experience. \n\nMy partner, _[Austin Steffes](https://www.linkedin.com/in/austin-steffes/)_, handled the **server-side backend**, database, and part of the game API using **Microsoft Azure**, while I focused on **Unity development**. This included world modeling, menu design, camera movement, animations, and overall game functionality. \n\nThe game idea was designed around the camera movement and animation. I aimed to showcase a park-themed environment with in-game objects acting as interactive menus for a better immersive experience.`,
     video: "https://www.youtube.com/embed/H7cmYf08RQY?feature=oembed",
@@ -55,7 +63,7 @@ export const projectsData: Project[] = [
         url: "https://play.unity.com/en/games/892bb4cc-a19a-4142-9b00-5ecce18e1062/uno-park",
         label: "Play Uno Park"
       }
-    ]      
+    ]
   },
   {
     id: 2,
@@ -64,7 +72,7 @@ export const projectsData: Project[] = [
     featured: false,
     title: "The Hobby Hub",
     images: [TheHobbyHubHome],
-    categories: [".Net", "C#", "Agile Methodologies","Form"],
+    categories: [".Net", "C#", "Agile Methodologies", "Form"],
     summary: "A ASP.Net application built in collaboration with a multidiciplinary team of developers following Agile Methodologies.",
     description: `This is my final project for the Agile Methodologies class, where I worked with three other developers using SCRUM for project management. The Hobby Hub is an **ASP.NET MVC** project built with **.NET Core**, following a code-first database approach using **Microsoft Entity Framework**. To ensure data security, we implemented **GUIDs** for unique identifiers and hashed user passwords. \n\nThe project features **JavaScript animations** and design elements to enhance the user experience. We also used CodePen.io to draw inspiration from public scripts, modifying the code to fit the MVC structure and meet specific project requirements.`,
     video: "https://www.youtube.com/embed/eUvfKQzT1qs?feature=oembed",
@@ -104,7 +112,7 @@ export const projectsData: Project[] = [
     summary: "A Python script app to code and decode text in 8 different cryptography methods: Caesar Cipher, Key-based Cipher, Vigenère Substitution, XOR Substitution with Key, Reversed Word, Reversed Message, Telephone Cipher, Binary Cipher",
     description: `**Criptografia** is a **Python-based** script application developed as my first project for the *Programming Workshop* course at the Costa Rica Institute of Technology.\n\nThis project enables users to **encode and decode** text using eight different cryptographic methods, offering a hands-on exploration of fundamental encryption techniques.\n## Supported Cryptography Methods:\n1. **Caesar Cipher** - Shifts each letter in the text by a fixed number of positions.\n2. **Key-Based Cipher** - Encrypts text using a user-defined key for character substitution.\n3. **Vigenère Cipher** - Uses a keyword to perform polyalphabetic substitution.\n4. **XOR Substitution with Key** - Applies a bitwise XOR operation with a key for encryption.\n5. **Reversed Word** - Reverses individual words while maintaining their original order.\n6. **Reversed Message** - Reverses the entire message for simple obfuscation.\n7. **Telephone Cipher** - Mimics the transformation of letters to numbers as seen on a telephone keypad.\n8. **Binary Cipher** - Converts text into its binary representation.\n\nThis project helped me develop foundational programming skills, including string manipulation, algorithm design, and user input handling in Python.`,
     video: "https://www.youtube.com/embed/McWwvHpWrZU?si=rT5b-0qPrZPakPbm",
-        links: [
+    links: [
       {
         type: 'github',
         url: "https://github.com/Cdguzmanr/Cdguzmanr-TP1-Carlos-Samuel-",
@@ -169,10 +177,10 @@ export const projectsData: Project[] = [
     id: 8,
     tier: 3,
     date: "2025-05",
-    featured: true,
+    featured: false,
     title: "OCEPI Contact Form",
     images: [OCEPIContact1],
-    categories: [".Net", "API", "Dynamics", "jQuery", "DevOps", "C#", "Form"],
+    categories: [".Net", "API", "Dynamics", "jQuery", "DevOps", "C#", "Form", "MVC"],
     summary: "A dynamic Contact-Us form with integration to Microsoft Dynamics for Case creation and automatic email sender.",
     description: `During my time as a Software Engineer for the *National Criminal Justice Training Center* (NCJTC), I was requested to create a *Contact-Us* form for **The Online Child Exploitation Prevention Initiative** (OCEPI).\n\nAiming to expand the organization's reach, the contact form must open a way of direct comunication between new customers and the OCEPI committee.\n\nTherefore, I created a new "Contact Us" section at the botton of OCEPI's page. By clicking the main button, a **collapsible panel** or "accordion display" will drop and show the form.\n\n ## Main Features:
     \n- Phone number **format mapping**
@@ -195,7 +203,7 @@ export const projectsData: Project[] = [
     featured: true,
     title: "ICAC Training Meeting Times",
     images: [ICACHome, ICACMeetingTimes],
-    categories: [".Net", "API", "SQL", "jQuery", "DevOps", "C#"],
+    categories: [".Net", "API", "SQL", "jQuery", "DevOps", "C#", "MVC"],
     summary: "New feature to allow Admins to add and modify Meeting times for Training Instances in all ICAC web platforms",
     description: `During my time as a Software Engineer for the *National Criminal Justice Training Center* (NCJTC), our team was requested to design a way to manage and display meeting times for the different trainings available in the **Internet Crimes Against Children Taskforce** (ICAC) website.\n\nTo achieve this, I created a new section in the **Training Details** page of ICAC Admin's site, so that staff members can **modify the Day of week and time schedule**. All changes saved in this page would then reflect at the Training Details page of ICAC's public site.\n\n## Main Features:
     \n- On/Off **toggle** to enable Meeting Times feature and display data in public site
@@ -220,7 +228,7 @@ export const projectsData: Project[] = [
     featured: true,
     title: "NCJTC Performance Update",
     images: [NCJTCHome, NCJTCPayments01, NCJTCPayments02],
-    categories: [".Net", "API", "jQuery", "DevOps", "C#", "SQL"],
+    categories: [".Net", "API", "jQuery", "DevOps", "C#", "SQL", "MVC"],
     summary: "A major refactoring and optimization project to improve the loading speed and usability of NCJTC's payments page, reducing load times in half, and implementing new features for a smoother user experience.",
     description: `As the main software engineer at the **National Criminal Justice Training Center (NCJTC)**, I identified and resolved a critical performance issue with the organization's payments page. Previously, users had to wait up to half a minute for the page to load, often causing browsers to freeze or mark the site as *“not responding.”* This issue stemmed from synchronous JavaScript calls and inefficient controller logic that attempted to load all data (registrations, organizations, and payment requests) upfront. To address this, I **redesigned the page's backend and frontend workflows.**
     \n\n## Main Tasks: 
@@ -296,6 +304,51 @@ export const projectsData: Project[] = [
       }
     ]
   },
+  {
+    id: 12,
+    tier: 4,
+    date: "2026-03",
+    featured: true,
+    title: "Campus Coin",
+    images: [CampusCoin1, CampusCoin2, CampusCoin3, CampusCoin4, CampusCoin5],
+    categories: ["Hackathon", "React", "FastAPI", "Gemini API", "Modal", "Python", "Tailwind CSS", "Vite", "UI/UX", "Typescript", "Node.js"],
+    summary: "A predictive financial engine that uses AI to project a 180-day financial runway and recommend actionable insights for college students.",
+    description: `During my first hackathon at **Hack Illinois**, my team and I built a predictive financial engine in just 36 hours. Recognizing that traditional finance apps don't work for the variable incomes of college students, we designed CampusCoin to forecast financial shortfalls caused by academic stress.\n\nTo achieve this, we built a serverless application where students can upload their course syllabi. Our 'invisible' AI backend then calculates expected drops in campus job working hours during busy weeks (like midterms) and automatically updates their **180-Day Financial Runway** without requiring a clunky chat interface.\n\n## Main Features:\n- **Predictive AI Engine** that infers work-hour reductions from uploaded documents using the Gemini API.\n- Clean, single-page dashboard built with **React and Recharts** to translate complex financial data into a simple runway graph.\n- **Actionable Insights** UI cards that provide 1-click financial solutions rather than conversational advice.\n- Serverless **Python/FastAPI** backend deployed on **Modal** for fast, scalable inference and state management.\n- Integration with the Capital One Nessie **API** for real-time bank syncing simulation.`,
+    video: "https://www.youtube.com/embed/kcaDnhPKhjc?si=UANKX4qFy-4fxdLs",
+    links: [
+      {
+        type: 'live',
+        url: "https://campuscoin-7a357.web.app",
+        label: "View Project Website"
+      },
+      {
+        type: 'other',
+        url: "https://devpost.com/software/campuscoin",
+        label: "View on Devpost"
+      },
+    ]
+  },
+  {
+    id: 13,
+    tier: 4,
+    date: "2026-04",
+    featured: true,
+    title: "Tale Tailor",
+    images: [TaleTailor1, TaleTailor2, TaleTailor3],
+    categories: ["React", "Enter.pro", "K2 Think V2", "Gemini API", "Tailwind CSS"],
+    summary: "Award-winning interactive AI storytelling platform where player decisions dynamically shape the narrative, artwork, and inventory.",
+    description: `Built during **HackPrinceton 2026**, Tale Tailor is an interactive 'Choose Your Own Adventure' web application. Despite a major roadblock where the campus Wi-Fi blocked our primary dev environment—forcing our team to hike to public libraries and cafes to keep coding—we refused to quit and ultimately won the **'Best Use of Enter.Pro'** track.\n\nThe application casts the user as the main character. Rather than following a static plot, every choice dynamically alters the story, generates new UI illustrations, and updates a live inventory system.\n\n## Main Features:\n- **Dynamic AI Narrative:** Engineered prompts using the **K2 Think V2 API** to serve as our core reasoning engine, enforcing strict JSON outputs for narrative branches, choices, and inventory updates.\n- **Full-Stack Deployment:** Designed, built, and deployed entirely within the **Enter.pro** ecosystem, utilizing its native database to persist game states so players can resume sessions later.\n- **Adaptive UI:** A responsive frontend built with **React** and **Tailwind CSS** that automatically re-renders text, interactive choices, and AI-generated scene artwork.\n- **Logic Mapping:** Utilized **Google Gemini** to map out the initial game loop and backend architecture before moving to production.`,
+    video: "https://www.youtube.com/embed/OBh1zhOlvQ0?si=ST-YuCKMa01I2Xyq",
+    links: [
+      {
+        type: 'other',
+        url: "https://devpost.com/software/taletailor",
+        label: "View on Devpost"
+      }
+    ]
+  }
+
+
   // {
   //   id: 12,
   //   tier: 4,
@@ -333,6 +386,6 @@ export const projectsData: Project[] = [
   //     },
   //   ], 
   // },
-  
-  
+
+
 ];

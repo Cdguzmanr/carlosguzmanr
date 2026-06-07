@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import ProjectCard from "../components/common/ProjectCard";
 import { projectsData } from "../data/projectsData";
 import CategoryButton from "../components/common/CategoryButton";
+import { sortProjects } from "../utils/sortProjects";
 // import { type Project } from "../types/IProject";
 
 const ProjectsPage: React.FC = () => {
@@ -27,16 +28,17 @@ const ProjectsPage: React.FC = () => {
 
   // Filter Logic
   const filteredProjects = useMemo(() => {
-    return projectsData.filter((project) => {
+    const filtered = projectsData.filter((project) => {
       const matchesCategory = selectedCategory
         ? project.categories.includes(selectedCategory)
         : true;
-      
-      const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                            project.summary.toLowerCase().includes(searchQuery.toLowerCase());
+
+      const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.summary.toLowerCase().includes(searchQuery.toLowerCase());
 
       return matchesCategory && matchesSearch;
-    }).sort((a, b) => b.tier - a.tier); // Keep your tier sorting!
+    });
+    return sortProjects(filtered);
   }, [selectedCategory, searchQuery]);
 
   // Handlers
@@ -59,13 +61,13 @@ const ProjectsPage: React.FC = () => {
 
         {/* --- Controls Section --- */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
-          
+
           {/* Category Filters */}
           <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-            <CategoryButton 
-              label="All" 
-              isSelected={!selectedCategory} 
-              onClick={() => { setSelectedCategory(null); setSearchParams({}); }} 
+            <CategoryButton
+              label="All"
+              isSelected={!selectedCategory}
+              onClick={() => { setSelectedCategory(null); setSearchParams({}); }}
             />
             {allCategories.map((cat) => (
               <CategoryButton
@@ -106,14 +108,14 @@ const ProjectsPage: React.FC = () => {
                 </motion.div>
               ))
             ) : (
-              <motion.div 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 className="col-span-full text-center py-20 text-text1"
               >
                 <p className="text-xl">No projects found matching your criteria.</p>
-                <button 
-                  onClick={() => {setSelectedCategory(null); setSearchQuery('');}}
+                <button
+                  onClick={() => { setSelectedCategory(null); setSearchQuery(''); }}
                   className="mt-4 text-primary2 underline hover:text-primary1"
                 >
                   Clear all filters

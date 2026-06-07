@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { VscAzureDevops, VscAzure } from "react-icons/vsc";
 import { TbBrandCSharp } from "react-icons/tb";
-import { DiVisualstudio, DiMsqlServer  } from "react-icons/di";
+import { DiVisualstudio, DiMsqlServer } from "react-icons/di";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
 import {
@@ -14,7 +14,7 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiDotnet,
-  SiJquery, 
+  SiJquery,
 } from "react-icons/si";
 import {
   FaPython,
@@ -37,10 +37,10 @@ const Skills = () => {
         { name: "C Sharp", icon: <TbBrandCSharp />, star: true },
         { name: "HTML5", icon: <FaHtml5 />, star: true },
         { name: "CSS3", icon: <FaCss3Alt />, star: true },
+        { name: "JavaScript", icon: <SiJavascript />, star: true },
+        { name: "TypeScript", icon: <SiTypescript />, star: true },
         { name: "C++", icon: <SiCplusplus /> },
         { name: "Java", icon: <FaJava /> },
-        { name: "JavaScript", icon: <SiJavascript /> },
-        { name: "TypeScript", icon: <SiTypescript /> },
         { name: "Python", icon: <FaPython /> },
         { name: "PHP", icon: <SiPhp /> },
       ],
@@ -50,8 +50,8 @@ const Skills = () => {
       skills: [
         { name: ".Net Core", icon: <SiDotnet />, star: true },
         { name: "jQuery", icon: <SiJquery />, star: true },
+        { name: "React", icon: <FaReact />, star: true },
         { name: "Node.js", icon: <FaNodeJs /> },
-        { name: "React", icon: <FaReact /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
         { name: "Unity", icon: <FaUnity /> },
       ],
@@ -59,11 +59,11 @@ const Skills = () => {
     {
       category: "Tools",
       skills: [
-        { name: "Azure DevOps", icon: <VscAzureDevops  />, star: true },
+        { name: "Azure DevOps", icon: <VscAzureDevops />, star: true },
         { name: "Git", icon: <FaGitAlt />, star: true },
         { name: "Visual Studio", icon: <DiVisualstudio />, star: true },
         { name: "VS Code", icon: <BiLogoVisualStudio />, star: true },
-        { name: "GitHub", icon: <FaGithub /> },
+        { name: "GitHub", icon: <FaGithub />, star: true },
         { name: "Bitbucket", icon: <FaBitbucket /> },
         { name: "Android Studio", icon: <SiAndroidstudio /> },
       ],
@@ -72,7 +72,7 @@ const Skills = () => {
       category: "Platforms",
       skills: [
         { name: "SQL Server", icon: <DiMsqlServer />, star: true },
-        { name: "Microsoft Azure", icon: <VscAzure /> },
+        { name: "Microsoft Azure", icon: <VscAzure />, star: true },
       ],
     },
   ];
@@ -110,7 +110,7 @@ const Skills = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-              > 
+              >
                 <h3 className="font-bebas text-2xl text-text2">
                   {group.category}
                   <span className='w-full border-b-4 block text-primary1'></span>
@@ -122,10 +122,9 @@ const Skills = () => {
                       key={i}
                       whileHover={{ scale: 1.1 }}
                       className={`relative flex flex-col items-center gap-2 p-4 rounded-lg shadow-md transition-all 
-                        ${
-                          skill.star
-                            ? "premium-card bg-primary2" // premium styling and animation for star skills
-                            : "bg-primary2"
+                        ${skill.star
+                          ? "premium-card bg-primary2" // premium styling and animation for star skills
+                          : "bg-primary2"
                         }`}
                     >
                       <div className="text-4xl text-ucla-blue">
@@ -141,7 +140,7 @@ const Skills = () => {
         </div>
       </section>
     </>
-);
+  );
 };
 
 export default Skills;

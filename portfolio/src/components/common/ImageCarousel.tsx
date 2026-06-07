@@ -11,7 +11,7 @@ interface ImageCarouselProps {
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ imagesUrl }) => {
   // 1. Initialize Embla
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "center" }, 
+    { loop: true, align: "center" },
     [Autoplay({ delay: 6000, stopOnInteraction: true })]
   );
 
@@ -29,7 +29,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ imagesUrl }) => {
     onSelect(emblaApi);
     setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
-    
+
     // Cleanup
     return () => {
       emblaApi.off("select", onSelect);
@@ -45,24 +45,22 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ imagesUrl }) => {
 
   return (
     <div className="relative w-full mx-auto group"> {/* 'relative' controls absolute buttons */}
-      
+
       {/* --- Embla Viewport --- */}
       <div className="overflow-hidden rounded-xl shadow-lg bg-gray-100" ref={emblaRef}>
-        
+
         {/* --- Flex Container (The Slider Track) --- */}
-        <div className="flex touch-pan-y"> 
+        <div className="flex touch-pan-y items-center">
           {imagesUrl.map((url, index) => (
-            <div 
-              key={index} 
-              className="flex-[0_0_100%] min-w-0 relative" // Mandatory: 100% width per slide
+            <div
+              key={index}
+              className="flex-[0_0_100%] min-w-0" // Mandatory: 100% width per slide
             >
-              <div className="relative w-full pt-[56.25%]"> {/* 16:9 Aspect Ratio container */}
-                <img
-                  src={url}
-                  alt={`Slide ${index + 1}`}
-                  className="absolute top-0 left-0 w-full h-full object-cover" 
-                />
-              </div>
+              <img
+                src={url}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-auto block object-contain"
+              />
             </div>
           ))}
         </div>
@@ -96,8 +94,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ imagesUrl }) => {
                 key={index}
                 onClick={() => scrollTo(index)}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 shadow-sm
-                  ${index === selectedIndex 
-                    ? "bg-primary1 w-6" 
+                  ${index === selectedIndex
+                    ? "bg-primary1 w-6"
                     : "bg-white/70 hover:bg-white"
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
